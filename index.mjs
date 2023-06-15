@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import * as dotenv from 'dotenv'
 
-const PORT = 3000;
+const PORT = 8000;
 dotenv.config();
 dotenv.config({ path: `.env.local`, override: true });
 
