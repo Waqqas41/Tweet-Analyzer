@@ -5,8 +5,9 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
-        <img src="/logo.png" alt="SuperViral.ai logo" width="380" />
-        <p>This is an interface to talk to the Last Codebender. Ask him anything you want.</p>
+      
+        <img src="/twitter.webp" alt="twitter logo" width="50px" height="40px"/>
+        <h2>Make your tweets go viral with the world's first ChatGPT powered Tweet Analyzer 🚀 </h2>
         <CodebenderIntro />
       </div>
     </div>
