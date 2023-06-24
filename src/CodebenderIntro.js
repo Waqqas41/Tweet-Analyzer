@@ -19,10 +19,6 @@ const CodebenderIntro = () => {
     }
   };
  
-  // .charcount {
-
-  // }
-
   const updatePrompt = (event) => {
     event.preventDefault();
     setPrompt(event.target.value);
