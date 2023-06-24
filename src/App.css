@@ -1,96 +1,125 @@
-body, h2 * {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  overflow:hidden; 
-}
-
-.App {
-  text-align: center;
-  background-image: linear-gradient(180deg,rgb(27, 100, 108), rgb(0, 62, 170)  );
-  height:150vh;
-  color: white;
-  display: flex;
-  margin: 0;
-}
-
-.container {
-  padding-top: 100px;
-  width: 100%;
-}
-
-h1 {
-  font-size: 50px;
-}
-
 .primaryColor {
-  color: #504dff;
+  --pcolor: rgb(0, 4, 56);
 }
 
 .secondaryColor {
-  color: rgb(65, 107, 184);
+  --scolor: rgb(60, 106, 193);
 }
 
-.mainForm {
-  margin: 2% auto auto 20%;
+body, h1 *,p {
+  margin: 0;
+  font-family: -apple-system, "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+
+}
+
+.App {
   display: flex;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  
+}
+
+  .container {
+    height: 150vh;
+    background: #0F2027;  /* fallback for old browsers */
+    background:
+    linear-gradient(rgb(0, 0, 0) 50%, rgba(21, 23, 26, 0.337)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  }
+
+    .twitlogo {
+      margin-top: 2%;
+      filter: brightness(1000%);
+    }
+
+.mainForm {
+  margin: auto auto auto 20% ;
+  display: flex;
+  flex-direction: column;
   justify-content: center; /*centers items on the line (the x-axis by default)*/
   align-items: left; /*centers items on the cross-axis (y by default)*/
-  flex-direction: column;
 }
 
 .mainForm input, textarea {
   
-  display:flex;  
-  justify-content: center; /*centers items on the line (the x-axis by default)*/
-  align-items: left; /*centers items on the cross-axis (y by default)*/
-  width: 250px;
-  height: 200px;
+  background-color: #000000;
+  color: white;
+  resize: none;
+  width: 350px;
+  height: 135px;
   padding: 10px 10px;
-  border-radius: 20px;
-  border: 1px solid white;
+  border-radius: 25px;
+  border: 2px solid;
+  border-color: #474747;
   outline: none; 
   font-family: inherit;
   font-size: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: auto;
+
 }
 
 .mainButton {
   
-  width: 290px;
+  width: 376px;
   padding: 10px 20px 10px 10px;
   font-family: inherit;
   font-size: inherit;
   border-radius: 20px;
-  font-size: 1rem;
-  border: 1px solid #0077ff;
+  font-size: inherit;
+  border: 0px solid; 
   outline: none;
-  background-color: #0077ff;
-  color: white;
+  background-color: #1DA1F2 ;
+  color: rgb(231, 233, 234);
   font-weight: 900;
   margin-top: 20px;
   cursor: pointer;
   text-transform: uppercase;
+  padding: auto;
+  
+
+  animation-name: hover2;
+  animation-duration: 0.4s;
+  animation-fill-mode:forwards;
+}
+
+/* .mainButton:hover {
+  background-color: #1c95e0; */
+  /* background-color: #111010; */
+/* } */
+
+.response {
+  
+  max-width: 600px;
+  display: flex;
+  justify-content: left;
+  align-items: left; /*centers items on the cross-axis (y by default)*/
+  text-align: left;
+  margin: -14% 14% auto auto;
+  font-size: 14px;
+  overflow-y:auto;
 }
 
 .mainButton:hover {
-  background-color: #55a5ff;
-  position: relative;
-  motion-offset:20px ;
+  /* position: relative; */
+  animation-name: hover;
+  animation-duration: 0.5s;
+  animation-fill-mode:forwards;
+  font-size: 16px;
+}
+@keyframes hover2 {
+  from {background-color: #1c95e07a;}
+  to {background-color: #1da0f2ae;}
 }
 
-.response {
-  max-width: 600px;
-  margin-left: 700px;
-  margin-top: -310px;
-  text-align: left;
-  padding: 10px 40px 10px 10px;
-  font-size: inherit;
-  display: block;
+@keyframes hover {
+  from {background-color: #1da0f2ae;}
+  to {background-color: #1c95e07a;}
 }
 

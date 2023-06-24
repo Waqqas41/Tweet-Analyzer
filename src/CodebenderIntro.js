@@ -47,10 +47,12 @@ const CodebenderIntro = () => {
       <form className="mainForm" onSubmit={submitForm}>
         {/* <input name="input-field" placeholder="Type your tweet" onChange={updatePrompt} value={prompt}/> */}
         {/* <textarea name="input-field" placeholder="Write something..." onChange={updatePrompt} value={prompt}></textarea> */}
-        <textarea name="input-field" maxlength="280" oninput="countChar(this)" spellcheck="true" onChange={updatePrompt} value={prompt}></textarea>
+        <textarea name="input-field" maxlength="280" oninput="countChar(this)" spellcheck="true" placeholder=" Write a tweet..." onChange={updatePrompt} value={prompt}></textarea>
         <button type="submit" className="mainButton">
           
-            {loading ? <i className="fa fa-cog fa-solid fa-spin" /> : <i className="fa fa-light fa-location-arrow" />}
+          <div className="icons">
+            {loading ? <p class="loading">Loading</p> : <p>Analyze Tweet</p>}
+            </div>
         </button>
       </form>    
       {renderResponse()}
