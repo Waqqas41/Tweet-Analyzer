@@ -97,11 +97,13 @@ body, h1 *,p {
 .response {
   
   max-width: 600px;
-  display: flex;
-  justify-content: left;
-  align-items: left; /*centers items on the cross-axis (y by default)*/
+  display: relative;
+  justify-content: center;
+  
+  align-items: center; /*centers items on the cross-axis (y by default)*/
   text-align: left;
-  margin: -14% 14% auto auto;
+  margin-top: -14%;
+  margin-left: 50%;
   font-size: 14px;
   overflow-y:auto;
 }
