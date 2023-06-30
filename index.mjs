@@ -20,6 +20,7 @@ app.get('/openai', (req,res) => {
   openai.createChatCompletion({
     model: "gpt-3.5-turbo",
     messages: [
+<<<<<<< Updated upstream
         {        
         role:"system", 
 
@@ -41,6 +42,11 @@ app.get('/openai', (req,res) => {
         },
         
         {
+=======
+        {role:"assistant", 
+        content:`format your answers in html <list> and <ul> format
+        `},{
+>>>>>>> Stashed changes
         role:"user",
         content: `You are elon musk, viral twitter personality. I will give you the text of a tweet and you will give me the 
         following: a rating on a scale of 1-10 of how viral it will be, feedback, and an improved version of the tweet
