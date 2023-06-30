@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const CodebenderIntro = () => {
-  const [result, setResult] = useState();
+  const [result, setResult] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [prompt, setPrompt] = useState("");
@@ -18,10 +18,6 @@ const CodebenderIntro = () => {
       setError("Something went wrong.")
     }
   };
- 
-  // .charcount {
-
-  // }
 
   const updatePrompt = (event) => {
     event.preventDefault();
@@ -37,7 +33,9 @@ const CodebenderIntro = () => {
   const renderResponse = () => {
     return (
       <div className="response">
-         <div dangerouslySetInnerHTML={{ __html: error || result }} />
+        <p>
+          {error || result}
+        </p>
       </div>
     )
   }
@@ -46,13 +44,11 @@ const CodebenderIntro = () => {
     <>
       <form className="mainForm" onSubmit={submitForm}>
         {/* <input name="input-field" placeholder="Type your tweet" onChange={updatePrompt} value={prompt}/> */}
-        {/* <textarea name="input-field" placeholder="Write something..." onChange={updatePrompt} value={prompt}></textarea> */}
-        <textarea name="input-field" maxlength="280" oninput="countChar(this)" spellcheck="true" placeholder=" Write a tweet..." onChange={updatePrompt} value={prompt}></textarea>
+        <textarea name="input-field" placeholder="Write something..." onChange={updatePrompt} value={prompt}></textarea>
+        
         <button type="submit" className="mainButton">
           
-          <div className="icons">
-            {loading ? <p class="loading">Loading</p> : <p>Analyze Tweet</p>}
-            </div>
+            {loading ? <i className="fa fa-circle-o-notch fa-spin" /> : <i className="fa fa-light fa-location-arrow" />}
         </button>
       </form>    
       {renderResponse()}

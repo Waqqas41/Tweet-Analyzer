@@ -1,23 +1,12 @@
-.primaryColor {
-  --pcolor: rgb(0, 4, 56);
-}
-
-.secondaryColor {
-  --scolor: rgb(60, 106, 193);
-}
-
-body, h1 *,p {
+body, h2 {
   margin: 0;
   font-family: -apple-system, "TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
-
 }
 
 .App {
-  display: flex;
   text-align: center;
   flex-direction: column;
   color: white;
@@ -38,36 +27,34 @@ body, h1 *,p {
     }
 
 .mainForm {
-  margin: auto auto auto 20% ;
+  margin: 2% auto auto 20%;
   display: flex;
   flex-direction: column;
   justify-content: center; /*centers items on the line (the x-axis by default)*/
-  align-items: left; /*centers items on the cross-axis (y by default)*/
+  align-items: center; /*centers items on the cross-axis (y by default)*/
+  flex-direction: column;
 }
 
 .mainForm input, textarea {
   
-  background-color: #000000;
-  color: white;
-  resize: none;
-  width: 350px;
-  height: 135px;
+  display:flex;  
+  justify-content: center; /*centers items on the line (the x-axis by default)*/
+  align-items: left; /*centers items on the cross-axis (y by default)*/
+  width: 250px;
+  height: 200px;
   padding: 10px 10px;
-  border-radius: 25px;
-  border: 2px solid;
-  border-color: #474747;
+  border-radius: 20px;
+  border: 1px solid white;
   outline: none; 
   font-family: inherit;
   font-size: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: auto;
-
 }
 
 .mainButton {
   
-  width: 376px;
+  width: 290px;
   padding: 10px 20px 10px 10px;
   font-family: inherit;
   font-size: inherit;
@@ -81,12 +68,12 @@ body, h1 *,p {
   margin-top: 20px;
   cursor: pointer;
   text-transform: uppercase;
-  padding: auto;
-  
+}
 
-  animation-name: hover2;
-  animation-duration: 0.4s;
-  animation-fill-mode:forwards;
+.mainButton:hover {
+  background-color: #55a5ff;
+  position: relative;
+  motion-offset:20px ;
 }
 
 /* .mainButton:hover {
@@ -95,33 +82,10 @@ body, h1 *,p {
 /* } */
 
 .response {
-  
-  max-width: 600px;
-  display: relative;
-  justify-content: center;
-  
-  align-items: center; /*centers items on the cross-axis (y by default)*/
+  max-width: 700px;
+  margin: auto;
   text-align: left;
-  margin-top: -14%;
-  margin-left: 50%;
-  font-size: 14px;
-  overflow-y:auto;
+  padding: 10px 40px 10px 10px;
+  font-size: inherit;
+  display: block;
 }
-
-.mainButton:hover {
-  /* position: relative; */
-  animation-name: hover;
-  animation-duration: 0.5s;
-  animation-fill-mode:forwards;
-  font-size: 16px;
-}
-@keyframes hover2 {
-  from {background-color: #1c95e07a;}
-  to {background-color: #1da0f2ae;}
-}
-
-@keyframes hover {
-  from {background-color: #1da0f2ae;}
-  to {background-color: #1c95e07a;}
-}
-
