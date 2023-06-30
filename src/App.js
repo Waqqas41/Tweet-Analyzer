@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className='container'>
       
-        <img src="/twitter.webp" alt="twitter logo" width="50px" height="40px"/>
+        <img src="twitlogo.webp" alt="twitter logo" width="50px" height="40px"/>
         <h2>Make your tweets go viral with the world's first ChatGPT powered Tweet Analyzer 🚀 </h2>
         <CodebenderIntro />
       </div>
