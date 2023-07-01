@@ -43,7 +43,7 @@ const CodebenderIntro = () => {
   return (
     <>
       <form className="mainForm" onSubmit={submitForm}>
-        {/* <input name="input-field" placeholder="Type your tweet" onChange={updatePrompt} value={prompt}/> */}
+        
         <textarea name="input-field" placeholder="Write something..." onChange={updatePrompt} value={prompt}></textarea>
         
         <button type="submit" className="mainButton">
