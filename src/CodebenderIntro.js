@@ -33,8 +33,7 @@ const CodebenderIntro = () => {
   const renderResponse = () => {
     return (
       <div className="response">
-                 <div dangerouslySetInnerHTML={{ __html: error || result }} />
-
+          <div dangerouslySetInnerHTML={{ __html: error || result }} />
       </div>
     )
   }
