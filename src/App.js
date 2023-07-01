@@ -10,7 +10,6 @@ function App() {
         <h1 className="title">Make your tweets go viral with the world's first
           <br></br> AI-powered Tweet Improver.</h1>
         <CodebenderIntro />
-        <changeborder />
       </div>
     </div>
   );

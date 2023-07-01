@@ -20,7 +20,6 @@ app.get('/openai', (req,res) => {
   openai.createChatCompletion({
     model: "gpt-3.5-turbo",
     temperature: 0,
-    stream: true,
     messages: [
         {        
         role:"assistant", 
