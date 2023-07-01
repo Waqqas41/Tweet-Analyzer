@@ -27,7 +27,7 @@ app.get('/openai', (req,res) => {
       - point \n
       - point \n
       - point \n :
-                a rating on a scale of 1-10 of how viral it will be, feedback, and suggestions to improve it 
+                in 20 words or less, a rating on a scale of 1-10 of how viral it will be, feedback, and suggestions to improve it 
                 Here is my text: ${req.query.prompt}\n`,
     }],
   }).then((response) => {
