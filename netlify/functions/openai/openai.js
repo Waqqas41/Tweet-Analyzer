@@ -2,7 +2,7 @@ require("dotenv").config();
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
@@ -18,7 +18,6 @@ exports.handler = async (event, context) => {
   try {
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
-      messages: [{ model: "gpt-3.5-turbo",
     temperature: 0,
     messages: [
         {        
@@ -47,8 +46,8 @@ exports.handler = async (event, context) => {
         content: `You are a professional tweet analyzer. you analyze even the most esoteric colloqual language. I will give you the text of a tweet and you will give me the 
         following: a rating on a scale of 1-10 of how viral it will be, feedback, and an improved version of the tweet
         all in 100 words or less and quantify the improvement of the new tweet over the first in %. Here is my text: ${req.query.prompt}\n. Answer:`
-      }]
-    }]
+           }
+        ]
     });
 
     return {

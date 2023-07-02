@@ -8,7 +8,7 @@ const CodebenderIntro = () => {
 
   const getData = async (input = prompt) => {
     try {
-      const response = await fetch(`${REACT_APP_BACKEND_URL}/openai?prompt=${input}`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/openai?prompt=${input}`);
       const body = await response.json();
       const aiResponse = body.content;
       setResult(aiResponse);
