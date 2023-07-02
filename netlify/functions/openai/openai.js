@@ -51,7 +51,7 @@ exports.handler = async (event, context) => {
 
     return {
       statusCode: 200,
-      body: res.json(response.data.choices[0].message.content),
+      body: JSON.stringify(response.data.choices[0].message.content),
       headers: {
         'Content-Type': 'application/json'
       }
