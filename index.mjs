@@ -38,7 +38,7 @@ app.get('/openai', (req,res) => {
         
         If there is no text, return an error.
 
-        make an html table of your answer and return it
+        make an html table of your answer and return it 
         
         `
         }, 
