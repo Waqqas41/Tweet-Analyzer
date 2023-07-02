@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const CodebenderIntro = () => {
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [prompt, setPrompt] = useState("");
@@ -12,6 +12,7 @@ const CodebenderIntro = () => {
       const body = await response.json();
       const aiResponse = body.content;
       setResult(aiResponse);
+      console.log(aiResponse); 
       setLoading(false);
       setError("");
     } catch (e) {
