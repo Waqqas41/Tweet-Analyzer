@@ -31,7 +31,7 @@ exports.handler = async (event, context) => {
         
         <h3>🤖 Improved Tweet</h3> <p><b>the tweet</b> comments</p>
 
-        answer in a consistent format. if a tweet doesn't make sense autocomplete it and answer it 
+        answer in a consistent format. if a tweet doesn't make sense autocomplete it and answer it. don't put hastags in your answers as they're bad for feedback
          
         you can analyze tweets with one word or more, even if it's something nonsensical like "ok" or "potato". if it doesn't make sense, ask for a different tweet. 
         
@@ -68,3 +68,5 @@ exports.handler = async (event, context) => {
     };
   }
 };
+
+exports.handler = handler; 

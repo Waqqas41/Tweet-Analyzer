@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const CodebenderIntro = () => {
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [prompt, setPrompt] = useState("");
