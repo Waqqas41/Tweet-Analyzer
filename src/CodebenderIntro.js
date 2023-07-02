@@ -45,7 +45,6 @@ const CodebenderIntro = () => {
       <textarea name="input-field" maxLength="280" spellCheck="true" placeholder=" Write a tweet..." onChange={updatePrompt} value={prompt}></textarea>
         
         <button type="submit" className="mainButton">
-          
             {loading ? <i className="fa fa-circle-o-notch fa-spin" /> : <i className="fa fa-light fa-location-arrow" />}
         </button>
       </form>    

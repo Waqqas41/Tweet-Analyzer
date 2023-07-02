@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
 
   try {
     const response = await openai.createChatCompletion({
-      model: "gpt-3.5-turbo",
+    model: "gpt-3.5-turbo",
     temperature: 0,
     messages: [
         {        
@@ -51,7 +51,7 @@ exports.handler = async (event, context) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify(response.data.choices[0].message.content),
+      body: res.json(response.data.choices[0].message.content),
       headers: {
         'Content-Type': 'application/json'
       }
