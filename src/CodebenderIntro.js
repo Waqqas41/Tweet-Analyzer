@@ -50,6 +50,7 @@ const CodebenderIntro = () => {
         </button>
       </form>    
       {renderResponse()}
+      {body.content} 
     </>
   );
 }
