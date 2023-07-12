@@ -1,28 +1,25 @@
 {
-  "name": "codebender-ai-starter",
+  "name": "Tweet-Analyzer",
   "author": "Zaurbek Stark",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "-": "^0.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "netlify-cli": "^15.8.0",
     "openai": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "netlify": "netlify",
     "start:backend": "nodemon index.mjs",
     "start:frontend": "react-scripts start",
-    "start": "concurrently -k \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:without-netlify": "concurrently -k \"npm run start:backend\" \"npm run start:frontend\"",
+    "start": "netlify dev",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "eslintConfig": {
     "extends": [
@@ -45,9 +42,5 @@
   "devDependencies": {
     "concurrently": "^8.1.0",
     "nodemon": "^2.0.22"
-  },
-  "description": "This is a starter code you can clone to build your first AI project✊",
-  "main": "index.js",
-  "keywords": [],
-  "license": "ISC"
+  }
 }

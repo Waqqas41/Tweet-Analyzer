@@ -32,7 +32,7 @@ const CodebenderIntro = () => {
 
   const renderResponse = () => {
     return (
-      <div className="response">
+      <div className="response" placeholder="Your answer will be displayed here!">
             <div dangerouslySetInnerHTML={{ __html: error || result }} />
       </div>
     )
@@ -42,7 +42,7 @@ const CodebenderIntro = () => {
     <>
       <form className="mainForm" onSubmit={submitForm}>
         
-      <textarea name="input-field" maxLength="280" spellCheck="true" placeholder=" Write a tweet..." onChange={updatePrompt} value={prompt}></textarea>
+      <textarea name="input-field" maxLength="280" spellCheck="true" placeholder=" Write a tweet less than 280 characters..." onChange={updatePrompt} value={prompt}></textarea>
         
         <button type="submit" className="mainButton">
           

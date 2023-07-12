@@ -14,8 +14,6 @@ body, h1 * {
     display: flex;
   text-align: center;
   flex-direction: column;
-  color: white;
-  
   scroll-behavior: smooth;
   -ms-overflow-style: none;
 }
@@ -23,7 +21,6 @@ body, h1 * {
 h1 {
   text-transform: capitalize;
 }
-
 
   .container {
     height: 150vh;
@@ -53,8 +50,8 @@ h1 {
   padding: 10px 10px 10px 10px;
   border-radius: 25px;
   border: 2px solid;
-  border-color: #474747;
-  outline: none; 
+  border-color: #474747; /*faded text color*/
+    outline: none; 
   font-family: inherit;
   font-size: inherit;
   -webkit-font-smoothing: antialiased;
@@ -120,4 +117,11 @@ h1 {
 @keyframes hover {
   from {background-color: #1da0f2ae;}
   to {background-color: #1c95e07a;}
+}
+
+span {
+  color:#474747;
+  font-family: inherit;
+  font-size: inherit;
+  
 }
