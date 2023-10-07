@@ -1,8 +1,8 @@
 # Deployed App https://tweetanalyzer.netlify.app/
 
-# Codebender AI Starter Project - React version
-
-This is a starter code you can clone to build your first AI project✊
+# Tweet Analyzer App
+## Description
+This app creates improved tweets for you using AI with just the click of a button! Check out the deployed app using the link tweetanalyzer.netlify.app.
 
 - The frontend runs in React. The code lives in the `src/` folder.
 - The backend runs in Nodejs. The code lives in `netlify/functions/openai/openai.js`. 
